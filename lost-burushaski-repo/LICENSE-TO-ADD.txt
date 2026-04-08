@@ -1,0 +1,9 @@
+Choose and add a license before making the repository public.
+
+Common options:
+- MIT
+- GPL-2.0-or-later
+- GPL-3.0-or-later
+- Apache-2.0
+
+If this will become a WordPress plugin distributed publicly, GPL compatibility is worth considering.
