@@ -19,7 +19,7 @@ export default function LoginPage() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      router.push('/dashboard/profile');
+      router.push('/profile');
     } catch (err: any) {
       setError(err.message || 'Failed to login');
     } finally {

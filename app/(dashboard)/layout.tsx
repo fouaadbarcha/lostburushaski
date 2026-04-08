@@ -30,7 +30,7 @@ export default function DashboardLayout({
     <div className="flex gap-6">
       {/* Basic Sidebar/Navigation for Dashboard can go here in the future */}
       <aside className="w-48 shrink-0 hidden md:flex flex-col gap-2 pt-6 border-r pr-6">
-        <a href="/dashboard/profile" className="text-sm font-medium hover:text-blue-600 block py-1">Profile</a>
+        <a href="/profile" className="text-sm font-medium hover:text-blue-600 block py-1">Profile</a>
         <a href="/dashboard/contribute" className="text-sm font-medium hover:text-blue-600 block py-1">Contribute</a>
         {['moderator', 'admin'].includes(user.role) && (
           <a href="/dashboard/moderation" className="text-sm font-medium hover:text-blue-600 block py-1">Moderation Queue</a>

@@ -32,7 +32,7 @@ export default function RegisterPage() {
         createdAt: new Date(),
       });
 
-      router.push('/dashboard/profile');
+      router.push('/profile');
     } catch (err: any) {
       setError(err.message || 'Failed to register account');
     } finally {
