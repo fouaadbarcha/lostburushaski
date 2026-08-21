@@ -19,7 +19,7 @@ export default function DashboardLayout({
   }, [user, loading, router]);
 
   if (loading) {
-    return <div className="p-8 text-center text-slate-500">Loading your dashboard...</div>;
+    return <div className="p-16 text-center text-ink-muted">Loading your dashboard...</div>;
   }
 
   if (!user) {
@@ -27,21 +27,26 @@ export default function DashboardLayout({
   }
 
   return (
-    <div className="flex gap-6">
-      {/* Basic Sidebar/Navigation for Dashboard can go here in the future */}
-      <aside className="w-48 shrink-0 hidden md:flex flex-col gap-2 pt-6 border-r pr-6">
-        <a href="/profile" className="text-sm font-medium hover:text-blue-600 block py-1">Profile</a>
-        <a href="/dashboard/contribute" className="text-sm font-medium hover:text-blue-600 block py-1">Contribute</a>
+    <div className="max-w-5xl mx-auto px-6 py-10 flex gap-10">
+      <aside className="w-48 shrink-0 hidden md:flex flex-col gap-1">
+        <a href="/profile" className="text-[13px] font-semibold text-ink-muted hover:text-accent hover:no-underline py-1.5">
+          Profile
+        </a>
+        <a href="/dashboard/contribute" className="text-[13px] font-semibold text-ink-muted hover:text-accent hover:no-underline py-1.5">
+          Contribute
+        </a>
         {['moderator', 'admin'].includes(user.role) && (
-          <a href="/dashboard/moderation" className="text-sm font-medium hover:text-blue-600 block py-1">Moderation Queue</a>
+          <a href="/dashboard/moderation" className="text-[13px] font-semibold text-ink-muted hover:text-accent hover:no-underline py-1.5">
+            Moderation Queue
+          </a>
         )}
         {user.role === 'admin' && (
-          <a href="/dashboard/admin" className="text-sm font-medium hover:text-blue-600 block py-1">Admin Panel</a>
+          <a href="/dashboard/admin" className="text-[13px] font-semibold text-ink-muted hover:text-accent hover:no-underline py-1.5">
+            Admin Panel
+          </a>
         )}
       </aside>
-      <div className="flex-1">
-        {children}
-      </div>
+      <div className="flex-1 min-w-0">{children}</div>
     </div>
   );
 }

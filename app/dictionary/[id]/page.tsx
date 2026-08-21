@@ -1,31 +1,42 @@
 export default function WordDetailPage({ params }: { params: { id: string } }) {
+  // TODO: fetch the real Word document (by params.id) from Firestore once
+  // the read path exists. Placeholder content kept identical to the prior
+  // scaffold, restyled only.
   return (
-    <div className="py-6 space-y-6 max-w-2xl mx-auto">
-      <div className="bg-white p-8 rounded-xl border shadow-sm space-y-4">
+    <div className="max-w-2xl mx-auto px-6 py-12">
+      <div className="card !p-8 space-y-6">
         <div>
-          <h1 className="text-4xl font-extrabold text-blue-600 mb-1">Baph</h1>
-          <div className="flex gap-2 text-sm text-slate-500">
-            <span className="px-2 py-1 bg-slate-100 rounded">Hunza</span>
-            <span className="px-2 py-1 bg-slate-100 rounded">Noun</span>
+          <h1 className="font-serif text-4xl font-bold text-ink mb-2">Baph</h1>
+          <div className="flex gap-2">
+            <span className="pill-neutral">Hunza</span>
+            <span className="pill-neutral">Noun</span>
           </div>
         </div>
-        
-        <div className="pt-4 border-t space-y-4">
+
+        <div className="pt-5 border-t border-line space-y-5">
           <div>
-            <h3 className="font-semibold text-slate-400 text-sm uppercase tracking-wider">English</h3>
-            <p className="text-lg">Apple</p>
+            <h3 className="text-xs font-semibold uppercase tracking-wide text-ink-muted mb-1">
+              English
+            </h3>
+            <p className="text-lg text-ink">Apple</p>
           </div>
           <div>
-            <h3 className="font-semibold text-slate-400 text-sm uppercase tracking-wider">Urdu</h3>
-            <p className="text-lg">سیب</p>
+            <h3 className="text-xs font-semibold uppercase tracking-wide text-ink-muted mb-1">
+              Urdu
+            </h3>
+            <p className="text-lg text-ink">سیب</p>
           </div>
           <div>
-            <h3 className="font-semibold text-slate-400 text-sm uppercase tracking-wider">Pronunciation</h3>
-            <p className="text-slate-800">/bɑf/</p>
+            <h3 className="text-xs font-semibold uppercase tracking-wide text-ink-muted mb-1">
+              Pronunciation
+            </h3>
+            <p className="text-ink-soft italic">/bɑf/</p>
           </div>
           <div>
-            <h3 className="font-semibold text-slate-400 text-sm uppercase tracking-wider">Example Syntax</h3>
-            <p className="text-slate-800 italic">Je baph shiyaba. (I am eating an apple.)</p>
+            <h3 className="text-xs font-semibold uppercase tracking-wide text-ink-muted mb-1">
+              Example
+            </h3>
+            <p className="text-ink-soft italic">Je baph shiyaba. (I am eating an apple.)</p>
           </div>
         </div>
       </div>
