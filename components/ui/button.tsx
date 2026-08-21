@@ -1,4 +1,4 @@
-import * as React from "react"
+ import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 
 export interface ButtonProps
@@ -17,7 +17,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
-        className={`inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 ${VARIANT_CLASSES[variant]} ${className ?? ""}`}
+        className={`inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.4_0.13_22_/_40%)] focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 ${VARIANT_CLASSES[variant]} ${className ?? ""}`}
         ref={ref}
         {...props}
       />
